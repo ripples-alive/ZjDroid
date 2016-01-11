@@ -23,11 +23,11 @@ public class AlarmManagerHook extends ApiMonitorHook {
             e.printStackTrace();
             alarmClockInfoClass = null;
         }
-        Method setImplmethod = RefInvoke.findMethodExact(
+        Method setImplMethod = RefInvoke.findMethodExact(
                 "android.app.AlarmManager", ClassLoader.getSystemClassLoader(),
                 "setImpl", int.class, long.class, long.class, long.class,
                 PendingIntent.class, WorkSource.class, alarmClockInfoClass);
-        hookhelper.hookMethod(setImplmethod, new AbstractBahaviorHookCallBack() {
+        hookhelper.hookMethod(setImplMethod, new AbstractBahaviorHookCallBack() {
 
             @Override
             public void descParam(HookParam param) {
