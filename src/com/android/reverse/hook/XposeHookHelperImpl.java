@@ -4,12 +4,13 @@ import java.lang.reflect.Member;
 import java.util.Arrays;
 
 import com.android.reverse.util.Logger;
+import de.robv.android.xposed.XC_MethodHook;
 import de.robv.android.xposed.XposedBridge;
 
 public class XposeHookHelperImpl implements HookHelperInterface {
 
     @Override
-    public void hookMethod(Member method, MethodHookCallBack callback) {
+    public void hookMethod(Member method, XC_MethodHook callback) {
         // TODO Auto-generated method stub
         if (method != null) {
             XposedBridge.hookMethod(method, callback);

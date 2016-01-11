@@ -16,10 +16,17 @@ public class AlarmManagerHook extends ApiMonitorHook {
 
     @Override
     public void startHook() {
-
+        Class alarmClockInfoClass;
+        try {
+            alarmClockInfoClass = Class.forName("android.app.AlarmManager$AlarmClockInfo");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            alarmClockInfoClass = null;
+        }
         Method setImplmethod = RefInvoke.findMethodExact(
                 "android.app.AlarmManager", ClassLoader.getSystemClassLoader(),
-                "setImpl", int.class, long.class, long.class, long.class, PendingIntent.class, WorkSource.class);
+                "setImpl", int.class, long.class, long.class, long.class,
+                PendingIntent.class, WorkSource.class, alarmClockInfoClass);
         hookhelper.hookMethod(setImplmethod, new AbstractBahaviorHookCallBack() {
 
             @Override
