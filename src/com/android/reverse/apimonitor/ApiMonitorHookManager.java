@@ -56,7 +56,7 @@ public class ApiMonitorHookManager {
 		this.mediaRecorderHook.startHook();
 		this.accountManagerHook.startHook();
 		this.activityManagerHook.startHook();
-		this.alarmManagerHook.startHook();
+//		this.alarmManagerHook.startHook();
 		this.connectivityManagerHook.startHook();
         this.contentResolverHook.startHook();
         this.contextImplHook.startHook();
