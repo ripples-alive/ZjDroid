@@ -93,7 +93,11 @@ public class DexFileInfoCollecter {
 
             @Override
             public void afterHookedMethod(HookParam param) {
-                Logger.log((String)param.args[0]);
+                String result = (String)param.getResult();
+                if (result == null) {
+                    result = "";
+                }
+                Logger.log(String.format("found library: %s -> %s", param.args[0], result));
                 if (DVMLIB_LIB.equals(param.args[0]) && param.getResult() == null) {
                     param.setResult("/data/data/com.android.reverse/lib/libdvmnative.so");
                 }
