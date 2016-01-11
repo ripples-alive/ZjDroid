@@ -28,7 +28,7 @@
             android:value="true" />
         <meta-data
             android:name="xposedminversion"
-            android:value="40" />
+            android:value="54" />
         <meta-data
             android:name="xposeddescription"
             android:value="collect the runtime information of the applicaitons" />
