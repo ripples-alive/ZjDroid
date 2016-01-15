@@ -1,15 +1,5 @@
 package com.android.reverse.collecter;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.lang.reflect.Method;
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
-import java.util.HashMap;
-import java.util.Iterator;
-
 import com.android.reverse.hook.HookHelperFacktory;
 import com.android.reverse.hook.HookHelperInterface;
 import com.android.reverse.hook.HookParam;
@@ -21,13 +11,23 @@ import com.android.reverse.util.RefInvoke;
 import dalvik.system.DexFile;
 import dalvik.system.PathClassLoader;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.lang.reflect.Method;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+import java.util.HashMap;
+import java.util.Iterator;
+
 public class DexFileInfoCollecter {
 
+    private final static String DVMLIB_LIB = "dvmnative";
     private static PathClassLoader pathClassLoader;
     private static HashMap<String, DexFileInfo> dynLoadedDexInfo = new HashMap<String, DexFileInfo>();
     private static DexFileInfoCollecter collecter;
     private HookHelperInterface hookhelper = HookHelperFacktory.getHookHelper();
-    private final static String DVMLIB_LIB = "dvmnative";
 
     private DexFileInfoCollecter() {
 
