@@ -6,7 +6,7 @@ public class DexFileInfo {
     private long mCookie;
     private ClassLoader defineClassLoader;
 
-    public DexFileInfo(String dexPath, int mCookie) {
+    public DexFileInfo(String dexPath, long mCookie) {
         super();
         this.dexPath = dexPath;
         this.mCookie = mCookie;

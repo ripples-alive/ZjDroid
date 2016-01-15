@@ -42,7 +42,7 @@ public class MemoryBackSmali {
         options.useLocalsDirective = true;
         options.noParameterRegisters = false;
         options.useSequentialLabels = true;
-        options.outputDebugInfo = true;™
+        options.outputDebugInfo = true;
         options.addCodeOffsets = false;
         return options;
     }
