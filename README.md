@@ -2,7 +2,7 @@
 
 Android app dynamic reverse tool based on Xposed framework.
 
-## 一、ZjDroid工具介绍
+## 一、ZjDroid 工具介绍
 
 ZjDroid 是基于 Xposed Framewrok 的动态逆向分析模块，逆向分析者可以通过 ZjDroid 完成以下工作：
 
@@ -15,7 +15,7 @@ ZjDroid 是基于 Xposed Framewrok 的动态逆向分析模块，逆向分析者
 1. dump Dalvik java 堆信息
 1. 在目标进程动态运行 lua 脚本
 
-## 二、ZjDroid相关命令
+## 二、ZjDroid 相关命令
 
 1. 获取APK当前加载DEX文件信息：
 `adb shell am broadcast -a com.zjdroid.invoke --ei target pid --es cmd '{"action":"dump_dexinfo"}'`
@@ -61,7 +61,7 @@ http://www.keplerproject.org/luajava/
 1. 敏感 API 调用监控
 
 
-## 三、相关命令执行结果查看：
+## 三、相关命令执行结果查看
 
 1. 命令执行结果：
 `adb shell logcat -s zjdroid-shell-{package name}`
