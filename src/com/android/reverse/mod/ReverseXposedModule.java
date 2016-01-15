@@ -1,13 +1,11 @@
 package com.android.reverse.mod;
 
 import android.content.pm.ApplicationInfo;
-
 import com.android.reverse.apimonitor.ApiMonitorHookManager;
 import com.android.reverse.collecter.DexFileInfoCollecter;
 import com.android.reverse.collecter.LuaScriptInvoker;
 import com.android.reverse.collecter.ModuleContext;
 import com.android.reverse.util.Logger;
-
 import de.robv.android.xposed.IXposedHookLoadPackage;
 import de.robv.android.xposed.XposedBridge;
 import de.robv.android.xposed.callbacks.XC_LoadPackage.LoadPackageParam;
