@@ -1,11 +1,11 @@
 package com.android.reverse.hook;
 
-import java.lang.reflect.Member;
-import java.util.Arrays;
-
 import com.android.reverse.util.Logger;
 import de.robv.android.xposed.XC_MethodHook;
 import de.robv.android.xposed.XposedBridge;
+
+import java.lang.reflect.Member;
+import java.util.Arrays;
 
 public class XposeHookHelperImpl implements HookHelperInterface {
 

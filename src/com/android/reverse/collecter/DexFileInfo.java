@@ -6,8 +6,7 @@ public class DexFileInfo {
     private long mCookie;
     private ClassLoader defineClassLoader;
 
-
-    public DexFileInfo(String dexPath, long mCookie) {
+    public DexFileInfo(String dexPath, int mCookie) {
         super();
         this.dexPath = dexPath;
         this.mCookie = mCookie;
@@ -20,6 +19,10 @@ public class DexFileInfo {
 
     public String getDexPath() {
         return dexPath;
+    }
+
+    public void setDexPath(String dexPath) {
+        this.dexPath = dexPath;
     }
 
     public long getmCookie() {
@@ -36,10 +39,6 @@ public class DexFileInfo {
 
     public void setDefineClassLoader(ClassLoader defineClassLoader) {
         this.defineClassLoader = defineClassLoader;
-    }
-
-    public void setDexPath(String dexPath) {
-        this.dexPath = dexPath;
     }
 
 

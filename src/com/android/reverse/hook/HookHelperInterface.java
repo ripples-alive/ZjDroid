@@ -6,7 +6,7 @@ import java.lang.reflect.Member;
 
 
 public interface HookHelperInterface {
-	
-	public abstract void hookMethod(Member method, XC_MethodHook callback);
+
+    public abstract void hookMethod(Member method, XC_MethodHook callback);
 
 }
