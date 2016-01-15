@@ -7,7 +7,6 @@ import android.content.ContentProviderOperation;
 import android.content.ContentValues;
 import android.database.ContentObserver;
 import android.net.Uri;
-import android.os.CancellationSignal;
 import android.text.TextUtils;
 import com.android.reverse.hook.HookParam;
 import com.android.reverse.util.Logger;
@@ -135,7 +134,7 @@ public class ContentResolverHook extends ApiMonitorHook {
 	public void startHook() {
 
 		Method querymethod = RefInvoke.findMethodExact("android.content.ContentResolver", ClassLoader.getSystemClassLoader(), "query", Uri.class,
-				String[].class, String.class, String[].class, String.class, CancellationSignal.class);
+				String[].class, String.class, String[].class, String.class);
 		hookhelper.hookMethod(querymethod, new AbstractBahaviorHookCallBack() {
 
 			@Override
@@ -152,7 +151,7 @@ public class ContentResolverHook extends ApiMonitorHook {
 		});
 
 		Method registerContentObservermethod = RefInvoke.findMethodExact("android.content.ContentResolver", ClassLoader.getSystemClassLoader(),
-				"registerContentObserver", Uri.class, boolean.class, ContentObserver.class, int.class);
+				"registerContentObserver", Uri.class, boolean.class, ContentObserver.class);
 		hookhelper.hookMethod(registerContentObservermethod, new AbstractBahaviorHookCallBack() {
 
 			@Override
